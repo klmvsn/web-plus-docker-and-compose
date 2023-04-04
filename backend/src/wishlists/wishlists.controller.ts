@@ -9,8 +9,8 @@ import {
 } from '@nestjs/common';
 import { Delete, Patch } from '@nestjs/common/decorators';
 import { JwtGuard } from 'src/auth/guards/jwt-auth.guard';
-import { CreateWishlistDto } from './dto/create-wishList.dto';
-import { UpdateWishlistDto } from './dto/update-wishList.dto';
+import { CreateWishlistDto } from './dto/create-wishlist.dto';
+import { UpdateWishlistDto } from './dto/update-wishlist.dto';
 import { WishlistsService } from './wishlists.service';
 
 @UseGuards(JwtGuard)
