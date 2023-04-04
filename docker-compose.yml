@@ -9,7 +9,7 @@ services:
     env_file: .env
     restart: on-failure
     ports:
-      - '8001:8001'
+      - '8001:4000'
     depends_on:
       - postgres
 
@@ -25,4 +25,4 @@ services:
       context: frontend
       dockerfile: Dockerfile
     ports:
-      - '81:81'
+      - '81:8081'
