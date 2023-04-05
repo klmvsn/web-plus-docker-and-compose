@@ -7,7 +7,7 @@ RUN npm run build
 
 FROM node:16-alpine AS backend
 WORKDIR /app
-COPY ./package*.json .
+COPY package*.json .
 RUN npm ci --omit=dev --audit=false && npm i -g pm2
 COPY --from=builder /app/dist ./dist
 COPY ./ecosystem.config.js .
